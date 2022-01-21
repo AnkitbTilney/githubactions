@@ -16,5 +16,10 @@ jobs:
     steps: 
       - name: echo "second string"
         run: echo "Hello Mars"
+      - name: python "run-commands"
+        run: |
+         import platform
+         print(platform.processor)
+         shell: python
         
 
