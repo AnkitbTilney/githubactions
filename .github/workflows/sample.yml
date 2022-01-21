@@ -7,7 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: echo string
-        run: eccho "Hello New World"
+        run: echo "Hello New World"
       - name: Directory Powershell
         run: Get-Location
   run-second-command:
