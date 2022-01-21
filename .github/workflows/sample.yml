@@ -10,5 +10,11 @@ jobs:
         run: echo "Hello New World"
       - name: Directory Powershell
         run: Get-Location
+  run-second-command:
+    runs-on: ubuntu-latest
+    needs: ["run-commands"]
+    steps: 
+      - name: echo "second string"
+        run: echo "Hello Mars"
         
 
