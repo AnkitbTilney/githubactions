@@ -13,13 +13,13 @@ jobs:
   run-second-command:
     runs-on: ubuntu-latest
     needs: ["run-commands"]
+    env:
+      OWNER_NAME: 'Ankit Bisht'
     steps: 
       - name: echo "second string"
         run: echo "Hello Mars"
-      - name: python "run-commands"
-        run: |
-         import platform
-         print(platform.processor())
-         shell: python
+      - name: echo owner name
+        run: echo ${OWNER_NAME}
+    
         
 
